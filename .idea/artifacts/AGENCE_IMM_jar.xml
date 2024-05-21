@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="AGENCE_IMM:jar">
+    <output-path>$PROJECT_DIR$/classes/artifacts/AGENCE_IMM_jar</output-path>
+    <root id="archive" name="AGENCE_IMM.jar">
+      <element id="module-output" name="AGENCE_IMM" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/ojdbc11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/rs2xml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/jdatepicker-1.3.4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
