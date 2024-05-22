@@ -14,3 +14,6 @@ The Real Estate Management Application is a Java-based application designed to s
 
 -Transaction Management: Record, modify, delete, and display transaction details.
 
+-main code is found in src>> pack
+-gui code is found in src>>app
+
