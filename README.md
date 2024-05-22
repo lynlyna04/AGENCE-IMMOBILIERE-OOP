@@ -5,8 +5,12 @@ The Real Estate Management Application is a Java-based application designed to s
 
 **Features**
 -Client Management: Add, modify, delete, and display client information.
+
 -Agent Management: Add, modify, delete, and display agent information.
+
 -Property Management: Add, modify, delete, and display property details.
+
 -Appointment Management: Schedule, modify, delete, and display appointments.
+
 -Transaction Management: Record, modify, delete, and display transaction details.
 
