@@ -6,8 +6,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
+import java.io.Serializable;
 
-public class Transaction {
+public class Transaction implements Serializable{
     private int ID;
     private Date date;
     private Propriete propriete;
@@ -23,6 +24,8 @@ public class Transaction {
         this.type = type;
         this.client = client;
     }
+    
+    public Transaction() {}
 
     public int getID() {
         return ID;
@@ -80,7 +83,7 @@ public class Transaction {
         Scanner scanner = new Scanner(System.in);
         System.out.print("ID: ");
         int id = scanner.nextInt();
-        scanner.nextLine(); // Consommer la nouvelle ligne
+        scanner.nextLine(); // Consume newline
         System.out.print("Date (yyyy-MM-dd): ");
         String dateString = scanner.nextLine();
         Date date = null;
@@ -101,5 +104,10 @@ public class Transaction {
         scanner.nextLine();
         Client client = serviceClient.getClientParId(clientID);
         return new Transaction(id, date, propriete, type, client);
+    }
+
+    @Override
+    public String toString() {
+        return "Transaction ID: " + ID + ", Date: " + date + ", Propriété: " + propriete + ", Type: " + type + ", Client: " + client;
     }
 }
