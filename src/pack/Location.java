@@ -28,6 +28,7 @@ public class Location extends Transaction {
 
     public void enregistrerPaiement() {
         double montantLoyer = contrat.getLoyer();
+      
         Paiement paiement = new Paiement(montantLoyer, this);
         ajoutPaiement(paiement);
     }
