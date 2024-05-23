@@ -16,6 +16,10 @@ public abstract class Personne {
         this.telephone = telephone;
         this.email = email;
     }
+    
+    public Personne() {
+    	
+    }
 
     public int getID() {
         return ID;
