@@ -2,8 +2,9 @@ package pack;
 
 import java.time.LocalDateTime;
 import java.util.Scanner;
+import java.io.Serializable;
 
-public class RDV {
+public class RDV implements Serializable{
     private int id;
     private LocalDateTime dateHeure;
     private Propriete propriete;
@@ -17,8 +18,9 @@ public class RDV {
         this.propriete = propriete;
         this.client = client;
         this.agent = agent;
-        //this.typeR = typeR;
+        this.typeR = typeR;
     }
+    public RDV() {}
 
     public int getId() {
         return id;
@@ -80,7 +82,8 @@ public class RDV {
     public void rdvRealiser() {
         this.typeR = TypeRDV.REALISE;
     }
- // Static method to create an RDV object by taking input from the user
+
+    // Static method to create an RDV object by taking input from the user
     public static RDV createRDVFromInput() {
         Scanner scanner = new Scanner(System.in);
 
@@ -95,7 +98,7 @@ public class RDV {
         LocalDateTime dateHeure = LocalDateTime.parse(dateTimeStr);
 
         // Assuming Propriete, Client, and Agent objects are created separately
-        // You can include logic here to create them from input if needeD
+        // You can include logic here to create them from input if needed
         Propriete propriete = null; // Create Propriete object
         Client client = null; // Create Client object
         Agent agent = null; // Create Agent object
@@ -104,8 +107,12 @@ public class RDV {
         System.out.print("Type de RDV (PLANIFIE/ANNULE/REALISE): ");
         TypeRDV typeR = TypeRDV.valueOf(scanner.nextLine().toUpperCase());
 
-        scanner.close();
-
         return new RDV(id, dateHeure, propriete, client, agent, typeR);
+    }
+
+    @Override
+    public String toString() {
+        return "RDV [ID=" + id + ", DateHeure=" + dateHeure + ", Propriete=" + propriete + ", Client=" + client 
+                + ", Agent=" + agent + ", Type=" + typeR + "]";
     }
 }
