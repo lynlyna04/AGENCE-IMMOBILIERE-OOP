@@ -6,10 +6,12 @@ public class Paiement {
     private int ID;
     private double montant;
     private boolean paye;
+    private static int nextID = 1; 
     private Transaction transaction;
 
-    public Paiement(int ID, double montant, Transaction transaction) {
-        this.ID = ID;
+    public Paiement(double montant, Transaction transaction) {
+        
+		this.ID = nextID++; // Assign the next available ID and increment the counter
         this.montant = montant;
         this.paye = false;
         this.transaction = transaction;
@@ -59,6 +61,6 @@ public class Paiement {
         int transactionID = scanner.nextInt();
         scanner.nextLine();
         Transaction transaction = serviceTransaction.getTransactionParId(transactionID);
-        return new Paiement(id, montant, transaction);
+        return new Paiement(id, transaction);
     }
 }
