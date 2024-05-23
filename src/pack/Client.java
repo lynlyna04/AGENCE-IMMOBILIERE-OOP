@@ -3,17 +3,26 @@ package pack;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.io.Serializable;
 
-public class Client extends Personne {
+public class Client extends Personne  implements Serializable{
     private TypeClient typeC;
     private List<Propriete> preferences;
     private List<Transaction> transactions;
+    private static final long serialVersionUID = -2720171250329988585L;
+    
+    
 
     public Client(int ID, String nom, String prenom, String adresse, String telephone, String email, TypeClient typeC) {
         super(ID, nom, prenom, adresse, telephone, email);
         this.typeC = typeC;
         this.preferences = new ArrayList<>();
         this.transactions = new ArrayList<>();
+    }
+    
+    @Override
+    public String toString() {
+        return "ID: " + this.getID() + ", Nom: " + this.getNom() + ", Prénom: " + this.getPrenom() + ", Adresse: " + this.getAdresse() + ", Téléphone: " + this.getTelephone() + ", Email: " + this.getEmail() + ", Type: " + this.getTypeC();
     }
 
     public TypeClient getTypeC() {
@@ -69,8 +78,10 @@ public class Client extends Personne {
         System.out.print("Type de client (ACHETEUR/LOCATAIRE): ");
         TypeClient typeC = TypeClient.valueOf(scanner.nextLine().toUpperCase());
 
-        scanner.close();
-
         return new Client(id, nom, prenom, adresse, telephone, email, typeC);
+    }
+    
+    public Client() {
+        // Default constructor
     }
 }
