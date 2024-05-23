@@ -1,25 +1,52 @@
+# Agence Immobilière Application
 
-**main code is found in src>> pack**
-**gui code is found in src>>app**
+## Overview
 
+This repository contains the source code and associated files for an Agence Immobilière (Real Estate Agency) application developed in Java. The application facilitates the management of clients, agents, properties, appointments, and transactions within a real estate agency.
 
-# AGENCE IMMOBILIERE
+## Contents
 
-The Real Estate Management Application is a Java-based application designed to simplify and streamline the operations of real estate agencies. It provides a centralized platform for managing clients, agents, properties, appointments, and transactions efficiently.
+- **AGENCE.pptx**: PowerPoint presentation providing an overview of the Agence Immobilière application, its features, and functionalities.
+  
+- **RAPPORT AGENCE IMM.pdf**: Report detailing the design, implementation, and features of the Agence Immobilière application.
 
+- **application.mkv**: Video demonstration showcasing the usage and functionality of the Agence Immobilière application.
 
-## Features
-Client Management: Add, modify, delete, and display client information.
+- **src**: Source code directory containing two packages:
+  
+  - **app**: Contains code related to the graphical user interface (GUI) of the application.
+  
+  - **pack**: Contains the core Java code implementing the functionality of the Agence Immobilière application.
 
-Agent Management: Add, modify, delete, and display agent information.
+## Usage
 
-Property Management: Add, modify, delete, and display property details.
+To run the Agence Immobilière application, follow these steps:
 
-Appointment Management: Schedule, modify, delete, and display appointments.
+1. Clone the repository to your local machine.
+   
+2. Open the project in your preferred Java IDE (Integrated Development Environment).
+   
+3. Navigate to the `src` directory and locate the main Java file (e.g., `main.java` or `Main.java`).
 
-Transaction Management: Record, modify, delete, and display transaction details.
+4. Run the main Java file to start the application.
 
+## Dependencies
 
+The application relies on external libraries for certain functionalities. Ensure that the following dependencies are included in your project:
 
+- **Libraries**: Check the `lib` directory for any external JAR files used by the application.
 
+## Additional Information
+
+For more detailed instructions on how to use the Agence Immobilière application, refer to the provided PowerPoint presentation (`AGENCE.pptx`) and the accompanying report (`RAPPORT AGENCE IMM.pdf`).
+
+## Contributing
+
+Contributions to the development of the Agence Immobilière application are welcome. If you encounter any issues or have suggestions for improvement, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
 
