@@ -1,6 +1,7 @@
 package pack;
+import java.io.Serializable;
 
-public abstract class Propriete {
+public abstract class Propriete implements Serializable {
     private int ID;
     private TypePropriete type;
     private double superficie;
@@ -17,6 +18,8 @@ public abstract class Propriete {
         this.localisation = localisation;
         this.description = description;
     }
+    
+    public Propriete() {}
 
     public int getID() {
         return ID;
